@@ -14,7 +14,7 @@ public class BookController {
     @Autowired
     BookService bookService;
 
-@RequestMapping("/")
+@RequestMapping("/aaa")
  public String index(Model model) {
     model.addAttribute("msg", "this is setting message");
     return "index";
