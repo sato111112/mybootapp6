@@ -8,7 +8,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
     public class BookRepository {
+
     private final ConcurrentMap<Integer, BookBean> bookMap = new ConcurrentHashMap<>();
+
     public BookBean save(BookBean bookBean) {
     return bookMap.put(bookBean.getId(), bookBean);
     }
