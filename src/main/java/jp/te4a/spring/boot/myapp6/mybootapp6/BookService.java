@@ -7,12 +7,14 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class BookService {
- @Autowired
- BookRepository bookRepository;
- public BookBean save(BookBean bookBean) {
-    return bookRepository.save(bookBean);
+
+    @Autowired
+    BookRepository bookRepository;
+    
+    public BookBean save(BookBean bookBean) {
+        return bookRepository.save(bookBean);
+    }
+    public List<BookBean> findAll() {
+        return bookRepository.findAll();
+    }
 }
-public List<BookBean> findAll() {
-    return bookRepository.findAll();
-}
-   }
